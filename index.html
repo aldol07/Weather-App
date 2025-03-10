@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Weather App - Open Meteo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background: linear-gradient(to right, #e0f7fa, #fff);
+      }
+      .weather-icon {
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary mb-4">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">🌤️ Smart Weather App</span>
+        <form class="d-flex" role="search">
+          <input id="cityInput" class="form-control me-2" type="search" placeholder="Enter City (e.g., Delhi)" aria-label="Search">
+          <button class="btn btn-light" type="submit" id="searchBtn">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2 class="text-center mb-4">Weather Forecast for <span id="cityName">City</span></h2>
+
+      <div class="card shadow p-4 mb-5">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <img id="weatherIcon" class="weather-icon mb-2" src="" alt="Weather Icon">
+            <h4><span id="weatherCondition"></span></h4>
+            <p><strong>Temperature:</strong> <span id="currentTemp"></span>°C</p>
+          </div>
+          <div class="col-md-4">
+            <h5>🌡️ Temp Range</h5>
+            <p>Max: <span id="maxTemp"></span>°C | Min: <span id="minTemp"></span>°C</p>
+            <p>Humidity: <span id="humidity"></span>%</p>
+          </div>
+          <div class="col-md-4">
+            <h5>💨 Wind & Time</h5>
+            <p>Wind Speed: <span id="windSpeed"></span> km/h</p>
+            <p>Local Time: <span id="localTime"></span></p>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="text-center mb-3">📆 3-Day Forecast</h4>
+      <div class="row text-center" id="forecastCards">
+        <!-- Forecast cards will be inserted here dynamically -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="text-center p-3 mt-4" style="font-size: 14px; color: gray;">
+        <strong>Made by Aldol</strong>
+      </footer>
+      
+  </body>
+</html>
